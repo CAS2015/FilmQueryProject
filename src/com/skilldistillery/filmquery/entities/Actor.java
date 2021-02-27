@@ -4,6 +4,8 @@ public class Actor {
 	private int actorId;
 	private String firstName, lastName;
 	
+	public Actor() {}
+	
 	public Actor(int id, String firstName, String lastName) {
 		super();
 		this.actorId = id;
@@ -11,11 +13,11 @@ public class Actor {
 		this.lastName = lastName;
 	}
 
-	public int getId() {
+	public int getActorId() {
 		return actorId;
 	}
 
-	public void setId(int id) {
+	public void setActorId(int id) {
 		this.actorId = id;
 	}
 
@@ -72,8 +74,7 @@ public class Actor {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Actor [id=").append(actorId).append(", firstName=").append(firstName).append(", lastName=")
-				.append(lastName).append("]");
+		builder.append("Id=").append(actorId).append(" - ").append(firstName).append(" ").append(lastName);
 		return builder.toString();
 	}
 	
